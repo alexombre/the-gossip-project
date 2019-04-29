@@ -1,0 +1,13 @@
+<div class="card">
+  <div class="card-header">
+    <%=@gossip.title%>
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p><%=@gossip.content%></p>
+      <footer class="blockquote-footer">According to <%=@user.first_name%> <a href ='/profil/<%=@user.id%>'>Voir profil...</a></footer>
+    </blockquote>
+  </div>
+</div>
+
+

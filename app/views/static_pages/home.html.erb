@@ -1,0 +1,16 @@
+<h1>Il y'a walou pour l'instant</h1>
+<table>
+  <tr>
+    <th>title</th>
+    <th>Paparazzi</th>   
+  </tr>
+  <% @gossip_array.each do |s| %>
+
+  <tr>
+      <td><%= s.title %></td>
+      <td><%= User.find(s.user_id).first_name %></td>
+      <td><a href ='/gossip/<%=s.id%>'>Voir plus...</a></td>
+  </tr>
+ 
+  <% end %>
+</table>
