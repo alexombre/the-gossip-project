@@ -1,16 +1,12 @@
-<h1>Il y'a walou pour l'instant</h1>
-<table>
-  <tr>
-    <th>title</th>
-    <th>Paparazzi</th>   
-  </tr>
-  <% @gossip_array.each do |s| %>
-
-  <tr>
-      <td><%= s.title %></td>
-      <td><%= User.find(s.user_id).first_name %></td>
-      <td><a href ='/gossip/<%=s.id%>'>Voir plus...</a></td>
-  </tr>
- 
-  <% end %>
-</table>
+<h1>Gossip Website</h1>
+<div class="card-columns">
+<% @gossip_array.each do |s| %>
+  <div class="card border-dark mb-3" style="max-width: 18rem;">
+    <div class="card-header"><%= User.find(s.user_id).first_name %></div>
+    <div class="card-body text-dark">
+      <h5 class="card-title"><%= s.title %></h5>
+      <p class="card-text"><a href ='/gossip/<%=s.id%>'>Voir plus...</a></p>
+    </div>
+  </div>
+<% end %>
+</div>

@@ -1,5 +1,8 @@
-<h1>Profil de <%=@user.first_name%> <%=@user.last_name%></h1>
-<p>Description : <%=@user.description%></p>
-<p>email : <%=@user.email%></p>
-<p>age : <%=@user.age%></p>
-<p>city : <%=City.find(@user.city_id).name%></p>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Profil de <%=@user.first_name%> <%=@user.last_name%></h5>
+    <h6 class="card-subtitle mb-2 text-muted"><%=@user.email%> | <%=@user.age%> ans</h6>
+    <p class="card-text"><%=@user.description%></p>
+    <p>from <a href="https://fr.wikipedia.org/wiki/<%=City.find(@user.city_id).name%>" class="card-link"><%=City.find(@user.city_id).name%></a></p>
+  </div>
+</div>
